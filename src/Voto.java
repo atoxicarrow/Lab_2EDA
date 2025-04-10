@@ -13,28 +13,28 @@ public class Voto{
     }
 
     //setters y getterssssd
-    int getCandidatoID() { return candidatoID; }
-    void setCandidatoID(int candidatoID) {
+    public int getCandidatoID() { return candidatoID; }
+    public void setCandidatoID(int candidatoID) {
         this.candidatoID = candidatoID;
     }
-    int getID() {
+    public int getID() {
         return ID;
     }
-    void setID(int ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
-    int getVotanteID() {
+    public int getVotanteID() {
         return votanteID;
     }
-    void setVotanteID(int votanteID) {
+    public void setVotanteID(int votanteID) {
         this.votanteID = votanteID;
     }
 
-    String getTimestap() {
+    public String getTimestap() {
         return timestamp;
     }
-    void setTimestap(String timestap) {
+    public void setTimestap(String timestap) {
         this.timestamp = timestap;
     }
 

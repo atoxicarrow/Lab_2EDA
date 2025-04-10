@@ -14,11 +14,12 @@ public class Candidato {
         this.votosRecibidos = new LinkedList<>();
     }
 
-    // Metodos_____
-    public void agragarVoto(Voto Voto) {
-        votosRecibidos.add(Voto);
+    //setters
+    public void setVotosRecibidos(Queue<Voto> cola){
+        this.votosRecibidos = cola;
     }
 
+    //getters
     public int getIdCandidato(){
         return idCandidato;
     }
@@ -31,4 +32,13 @@ public class Candidato {
     public Queue<Voto> getVotosRecibidos(){
         return votosRecibidos;
     }
-}
+
+
+    // Metodos_____
+    public void agregarVoto(Voto Voto) {
+        votosRecibidos.add(Voto);
+    }
+
+
+
+    }
