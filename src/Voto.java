@@ -2,41 +2,41 @@ public class Voto{
     private int ID;
     private int votanteID;
     private int candidatoID;
-    private String timestap;
+    private String timestamp;
+
     //constructorsito
-    public Voto(int ID, int VotanteID, int candidatoID, String timestap){
+    public Voto(int ID, int VotanteID, int candidatoID, String timestamp){
         this.ID= ID;
         this.votanteID = VotanteID;
         this.candidatoID = candidatoID;
-        this.timestap = timestap;
+        this.timestamp = timestamp;
     }
 
     //setters y getterssssd
-    public int getCandidatoID() {
-        return candidatoID;
-    }
-    public void setCandidatoID(int candidatoID) {
+    int getCandidatoID() { return candidatoID; }
+    void setCandidatoID(int candidatoID) {
         this.candidatoID = candidatoID;
     }
-    public int getID() {
+    int getID() {
         return ID;
     }
-    public void setID(int ID) {
+    void setID(int ID) {
         this.ID = ID;
     }
-    public int getVotanteID() {
+
+    int getVotanteID() {
         return votanteID;
     }
-    public void setVotanteID(int votanteID) {
+    void setVotanteID(int votanteID) {
         this.votanteID = votanteID;
     }
-    public String getTimestap() {
-        return timestap;
-    }
-    public void setTimestap(String timestap) {
-        this.timestap = timestap;
-    }
 
+    String getTimestap() {
+        return timestamp;
+    }
+    void setTimestap(String timestap) {
+        this.timestamp = timestap;
+    }
 
 
 }
