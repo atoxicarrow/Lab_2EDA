@@ -30,6 +30,4 @@ public class Votante {
     public void marcarComoVotado(){
         votoStat = true;
     }
-
-
 }
