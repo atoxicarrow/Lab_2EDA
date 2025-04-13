@@ -1,5 +1,6 @@
 import java.time.LocalTime;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -33,19 +34,19 @@ public class UrnaElectoral {
             boolean logrado = false;
 
             for(Candidato candidato : listaCandidatos){
-             if(candidatoID == candidato.getIdCandidato()){
-                 candidato.agregarVoto(nVoto);
-                 logrado=true;
-                 System.out.print("Voto realizado.");
-                 break;
-             }
+                 if(candidatoID == candidato.getIdCandidato()){
+                     candidato.agregarVoto(nVoto);
+                     logrado=true;
+                     System.out.print("Voto realizado.");
+                     break;
+                 }
             }
             if(!logrado){
                 System.out.print("Candidato no encontrado.");
-                return;
+            }else {
+                HistorialVotos.push(nVoto);
+                votanteID.marcarComoVotado();
             }
-            HistorialVotos.push(nVoto);
-            votanteID.marcarComoVotado();
         }
     }
 
@@ -83,6 +84,14 @@ public class UrnaElectoral {
     }
 
     public void obtenerResultados(){
+        System.out.println("Resultados: ");
+        for(Candidato candidato : listaCandidatos){
+            String nombre= candidato.getNombre();
+            int cantidadVotos = candidato.getVotosRecibidos().size();
+
+            System.out.print( nombre +": " + cantidadVotos + " Votos" );
+        }
+
     }
 
 

@@ -2,13 +2,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Candidato {
-    int idCandidato;
+    int id;
     String nombre;
     String partido;
     Queue<Voto> votosRecibidos;
 
     public Candidato(int idCandidato, String nombre, String partido){
-        this.idCandidato = idCandidato;
+        this.id = idCandidato;
         this.nombre = nombre;
         this.partido = partido;
         this.votosRecibidos = new LinkedList<>();
@@ -21,7 +21,7 @@ public class Candidato {
 
     //getters
     public int getIdCandidato(){
-        return idCandidato;
+        return id;
     }
     public String getNombre(){
         return nombre;
