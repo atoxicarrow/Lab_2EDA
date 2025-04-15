@@ -78,7 +78,6 @@ public class UrnaElectoral {
             System.out.print("Voto " + idVoto + " no encontrado. ");
         }
 
-// Restaurar la cola original del candidato
         candidatoID.setVotosRecibidos(pilaAux);
     }
 
