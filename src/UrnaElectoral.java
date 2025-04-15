@@ -37,7 +37,7 @@ public class UrnaElectoral {
                  if(candidatoID == candidato.getIdCandidato()){
                      candidato.agregarVoto(nVoto);
                      logrado=true;
-                     System.out.print("Voto realizado.");
+                     System.out.print("Voto realizado a "+candidato.getNombre()+"\n");
                      break;
                  }
             }
@@ -89,7 +89,7 @@ public class UrnaElectoral {
             String nombre= candidato.getNombre();
             int cantidadVotos = candidato.getVotosRecibidos().size();
 
-            System.out.print( nombre +": " + cantidadVotos + " Votos" );
+            System.out.println( "| "+nombre +": " + cantidadVotos + " Votos " );
         }
 
     }
