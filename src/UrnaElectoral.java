@@ -37,7 +37,7 @@ public class UrnaElectoral {
                  if(candidatoID == candidato.getIdCandidato()){
                      candidato.agregarVoto(nVoto);
                      logrado=true;
-                     System.out.print("Voto realizado a "+candidato.getNombre()+". ID del voto: " + (nVoto.getID() + 1) );
+                     System.out.println("Voto realizado a "+candidato.getNombre()+". ID del voto: " + (nVoto.getID() + 1) );
                      break;
                  }
             }
