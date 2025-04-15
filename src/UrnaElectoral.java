@@ -37,7 +37,7 @@ public class UrnaElectoral {
                  if(candidatoID == candidato.getIdCandidato()){
                      candidato.agregarVoto(nVoto);
                      logrado=true;
-                     System.out.print("Voto realizado a "+candidato.getNombre()+"\n");
+                     System.out.print("Voto realizado a "+candidato.getNombre()+". ID del voto: " + (nVoto.getID() - 1) );
                      break;
                  }
             }
@@ -62,25 +62,24 @@ public class UrnaElectoral {
         Queue<Voto> pilaAux = new LinkedList<>();
 
 
-        while(!candidatoID.getVotosRecibidos().isEmpty()){
-            Voto aux = candidatoID.getVotosRecibidos().poll();//POLL GUARDA Y BORRA AL PRIMER OBJETO EN LA COLA
+        while(!candidatoID.getVotosRecibidos().isEmpty()) {
+            Voto aux = candidatoID.getVotosRecibidos().poll(); // saca y borra
 
             if(aux.getID() == idVoto) {
                 VotosReportados.add(aux);
-                System.out.print("Reporte realizado con exito.");
+                System.out.print("Reporte realizado con éxito.");
                 logrado = true;
-            }else{
+            } else {
                 pilaAux.add(aux);
             }
         }
 
         if(!logrado){
-            System.out.print("Voto" + idVoto + " no encontrado. ");
-        }
-        while(!pilaAux.isEmpty()){
-            candidatoID.setVotosRecibidos(pilaAux);
+            System.out.print("Voto " + idVoto + " no encontrado. ");
         }
 
+// Restaurar la cola original del candidato
+        candidatoID.setVotosRecibidos(pilaAux);
     }
 
     public void obtenerResultados(){

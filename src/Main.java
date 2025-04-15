@@ -79,8 +79,8 @@ public class Main {
                 case 4:{
                     System.out.print("Ingrese id del candidato: ");
                     int id = sc.nextInt();
-                    System.out.print("Ingrese id del Votante: ");
-                    int idVoto = sc.nextInt();
+                    System.out.print("Ingrese id del voto: ");
+                    int idVoto = sc.nextInt() - 1 ;
 
                         Candidato candidato_ = null;
                     for(Candidato candidato : listaCandidatos){
