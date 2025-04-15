@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -77,7 +79,7 @@ public class Main {
                 case 4:{
                     System.out.print("Ingrese id del candidato: ");
                     int id = sc.nextInt();
-                    System.out.print("Ingrese id del Voto: ");
+                    System.out.print("Ingrese id del Votante: ");
                     int idVoto = sc.nextInt();
 
                         Candidato candidato_ = null;
